@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Islamabad Travel Consultant</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial}
+body{background:#f4f4f4}
+
+/* Header */
+header{
+background:#0a7d5e;color:#fff;padding:15px;text-align:center;font-size:24px;font-weight:bold;
+}
+
+/* Hero */
+.hero{
+background:url('https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1') center/cover;
+color:white;padding:90px 20px;text-align:center;
+}
+.hero h1{font-size:40px;margin-bottom:10px}
+.hero p{font-size:18px;margin-bottom:20px}
+
+.btn{
+background:#0a7d5e;color:white;padding:12px 25px;text-decoration:none;border-radius:5px;font-weight:bold;
+}
+
+/* Section */
+.section{padding:50px 20px;text-align:center}
+.cards{display:flex;flex-wrap:wrap;justify-content:center}
+
+.card{
+background:white;width:280px;margin:15px;padding:20px;border-radius:8px;
+box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Booking Form */
+form{max-width:400px;margin:auto;text-align:left}
+input,textarea{
+width:100%;padding:10px;margin:8px 0;border:1px solid #ccc;border-radius:5px;
+}
+
+/* Footer */
+footer{
+background:#222;color:white;text-align:center;padding:15px;margin-top:20px;
+}
+
+/* WhatsApp Floating */
+.whatsapp{
+position:fixed;bottom:20px;right:20px;background:#25D366;color:white;
+padding:15px;border-radius:50%;font-size:22px;text-decoration:none;
+box-shadow:0 0 10px rgba(0,0,0,0.3);
+}
+</style>
+</head>
+
+<body>
+
+<header>Islamabad Travel Consultant</header>
+
+<!-- HERO -->
+<div class="hero">
+<h1>Umrah & Hajj Packages</h1>
+<p>Affordable Umrah from Pakistan | Saudi Visa Services</p>
+<a class="btn" href="https://wa.me/923217644890">Contact WhatsApp</a>
+</div>
+
+<!-- SERVICES -->
+<div class="section">
+<h2>Our Services</h2>
+<div class="cards">
+
+<div class="card">
+<h3>Umrah Packages</h3>
+<p>Best hotels in Makkah & Madina with affordable prices.</p>
+</div>
+
+<div class="card">
+<h3>Hajj Packages</h3>
+<p>Complete Hajj guidance and comfortable travel services.</p>
+</div>
+
+<div class="card">
+<h3>Saudi Visa</h3>
+<p>Fast and reliable Saudi visa processing assistance.</p>
+</div>
+
+</div>
+</div>
+
+<!-- ABOUT -->
+<div class="section" style="background:#fff">
+<h2>About Us</h2>
+<p>Islamabad Travel Consultant provides trusted Umrah, Hajj & Visa services with best prices and professional support.</p>
+</div>
+
+<!-- BOOKING FORM -->
+<div class="section">
+<h2>Book Your Umrah</h2>
+
+<form onsubmit="sendWhatsApp();return false;">
+<input type="text" id="name" placeholder="Your Name" required>
+<input type="text" id="phone" placeholder="Phone Number" required>
+<textarea id="msg" placeholder="Package / Month / Persons"></textarea>
+<button class="btn" type="submit">Send Booking</button>
+</form>
+
+</div>
+
+<!-- CONTACT -->
+<div class="section" style="background:#fff">
+<h2>Contact</h2>
+<p>WhatsApp: 03217644890</p>
+<p>Email: travel@email.com</p>
+</div>
+
+<footer>© 2026 Islamabad Travel Consultant</footer>
+
+<!-- WhatsApp Floating Button -->
+<a class="whatsapp" href="https://wa.me/923217644890">💬</a>
+
+<script>
+function sendWhatsApp(){
+let name=document.getElementById("name").value;
+let phone=document.getElementById("phone").value;
+let msg=document.getElementById("msg").value;
+
+let url="https://wa.me/923217644890?text="
++ "Name: "+name+"%0A"
++ "Phone: "+phone+"%0A"
++ "Details: "+msg;
+
+window.open(url,'_blank');
+}
+</script>
+
+</body>
+</html>
